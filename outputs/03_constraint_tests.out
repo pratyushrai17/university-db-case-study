@@ -1,0 +1,43 @@
+--------------
+INSERT INTO STUDENT (student_id, student_name, dept_id) VALUES (2001, NULL, 1)
+--------------
+
+ERROR 1048 (23000) at line 8: Column 'student_name' cannot be null
+--------------
+INSERT INTO FACULTY (faculty_id, faculty_name, dept_id, salary) VALUES (201, NULL, 1, 50000)
+--------------
+
+ERROR 1048 (23000) at line 11: Column 'faculty_name' cannot be null
+--------------
+INSERT INTO DEPARTMENT (dept_id, dept_name) VALUES (11, NULL)
+--------------
+
+ERROR 1048 (23000) at line 14: Column 'dept_name' cannot be null
+--------------
+INSERT INTO STUDENT (student_id, student_name, dept_id, email, phone)
+VALUES (2002, 'Test Student', 1, 'aarav.mehta@vitstudent.ac.in', '9000000001')
+--------------
+
+ERROR 1062 (23000) at line 17: Duplicate entry 'aarav.mehta@vitstudent.ac.in' for key 'STUDENT.email'
+--------------
+INSERT INTO STUDENT (student_id, student_name, dept_id, email, phone)
+VALUES (2003, 'Test Student', 1, 'new.mail@vitstudent.ac.in', '9876500001')
+--------------
+
+ERROR 1062 (23000) at line 21: Duplicate entry '9876500001' for key 'STUDENT.phone'
+--------------
+INSERT INTO COURSE (course_id, course_name, dept_id, credits) VALUES ('BTEST01', 'Test', 1, 8)
+--------------
+
+ERROR 3819 (HY000) at line 25: Check constraint 'chk_course_credits' is violated.
+--------------
+INSERT INTO FACULTY (faculty_id, faculty_name, dept_id, salary) VALUES (202, 'Test Faculty', 1, -5000)
+--------------
+
+ERROR 3819 (HY000) at line 28: Check constraint 'chk_faculty_salary' is violated.
+--------------
+INSERT INTO STUDENT (student_id, student_name, dept_id) VALUES (2004, 'Test Student', 99)
+--------------
+
+ERROR 1452 (23000) at line 31: Cannot add or update a child row: a foreign key constraint fails (`university_db`.`STUDENT`, CONSTRAINT `fk_student_dept` FOREIGN KEY (`dept_id`) REFERENCES `DEPARTMENT` (`dept_id`))
+Bye

@@ -1,0 +1,134 @@
+--------------
+CALL enroll_student(1007, 'BCSE302L')
+--------------
+
++--------------------------------------------------+
+| message                                          |
++--------------------------------------------------+
+| Student 1007 enrolled in BCSE302L (enroll_id 26) |
++--------------------------------------------------+
+1 row in set
+
+Query OK, 0 rows affected
+
+--------------
+SELECT * FROM ENROLLMENT WHERE student_id = 1007
+--------------
+
++-----------+------------+-----------+-------------+-------+
+| enroll_id | student_id | course_id | enroll_date | grade |
++-----------+------------+-----------+-------------+-------+
+|        26 |       1007 | BCSE302L  | 2026-10-23  | NULL  |
++-----------+------------+-----------+-------------+-------+
+1 row in set
+
+--------------
+CALL enroll_student(1007, 'BXXX999')
+--------------
+
+ERROR 1644 (45000) at line 12: Course does not exist
+--------------
+SELECT student_id, student_name, dob, get_student_age(student_id) AS age
+FROM   STUDENT
+WHERE  student_id IN (1001, 1005, 1019)
+--------------
+
++------------+---------------+------------+------+
+| student_id | student_name  | dob        | age  |
++------------+---------------+------------+------+
+|       1001 | Aarav Mehta   | 2005-03-14 |   21 |
+|       1005 | Vikram Singh  | 2004-09-18 |   22 |
+|       1019 | Harsh Agarwal | 2006-01-15 |   20 |
++------------+---------------+------------+------+
+3 rows in set
+
+--------------
+SELECT faculty_id, faculty_name, doj, salary FROM FACULTY ORDER BY faculty_id
+--------------
+
++------------+----------------------+------------+-----------+
+| faculty_id | faculty_name         | doj        | salary    |
++------------+----------------------+------------+-----------+
+|        101 | Dr. Anil Sharma      | 2010-07-15 | 125400.00 |
+|        102 | Dr. Priya Venkatesh  | 2015-06-01 |  88750.00 |
+|        103 | Dr. Karthik Raja     | 2022-01-10 |  62300.00 |
+|        104 | Dr. Deepa Krishnan   | 2012-08-20 | 118900.00 |
+|        105 | Dr. Mohan Das        | 2023-07-03 |  58600.00 |
+|        106 | Dr. Sneha Pillai     | 2017-12-11 |  84250.00 |
+|        107 | Dr. Rajesh Nair      | 2011-03-25 | 109500.00 |
+|        108 | Dr. Farhan Ali       | 2024-02-19 |  55450.00 |
+|        109 | Dr. Lavanya Mohan    | 2018-09-05 |  79800.00 |
+|        110 | Dr. Ganesh Murthy    | 2021-11-22 |  67150.00 |
+|        111 | Dr. Swathi Reddy     | 2014-04-14 |  97600.00 |
+|        112 | Dr. Naveen Joseph    | 2025-01-06 |  52900.00 |
+|        113 | Dr. Harini Srinivas  | 2019-08-01 |  76450.00 |
+|        114 | Dr. Balaji Subramani | 2013-10-30 |  91200.00 |
+|        115 | Dr. Ritu Agarwal     | 2024-06-17 |  48750.00 |
++------------+----------------------+------------+-----------+
+15 rows in set
+
+--------------
+CALL faculty_salary_hike()
+--------------
+
++------------+----------------------+---------------+------------+------------+
+| faculty_id | faculty_name         | years_service | old_salary | new_salary |
++------------+----------------------+---------------+------------+------------+
+|        101 | Dr. Anil Sharma      |            16 |  125400.00 |  137940.00 |
+|        102 | Dr. Priya Venkatesh  |            11 |   88750.00 |   97625.00 |
+|        104 | Dr. Deepa Krishnan   |            14 |  118900.00 |  130790.00 |
+|        106 | Dr. Sneha Pillai     |             8 |   84250.00 |   92675.00 |
+|        107 | Dr. Rajesh Nair      |            15 |  109500.00 |  120450.00 |
+|        109 | Dr. Lavanya Mohan    |             8 |   79800.00 |   87780.00 |
+|        111 | Dr. Swathi Reddy     |            12 |   97600.00 |  107360.00 |
+|        113 | Dr. Harini Srinivas  |             7 |   76450.00 |   84095.00 |
+|        114 | Dr. Balaji Subramani |            12 |   91200.00 |  100320.00 |
++------------+----------------------+---------------+------------+------------+
+9 rows in set
+
++---------------------------------------+
+| summary                               |
++---------------------------------------+
+| 9 faculty members received a 10% hike |
++---------------------------------------+
+1 row in set
+
+Query OK, 0 rows affected
+
+--------------
+INSERT INTO ENROLLMENT (student_id, course_id, enroll_date) VALUES (1001, 'BCSE302L', CURDATE())
+--------------
+
+ERROR 1644 (45000) at line 24: Duplicate enrollment: student is already enrolled in this course
+--------------
+CALL enroll_student(1001, 'BCSE302L')
+--------------
+
+ERROR 1644 (45000) at line 26: Duplicate enrollment: student is already enrolled in this course
+--------------
+INSERT INTO FEE_PAYMENT (student_id, amount, payment_date, status)
+VALUES (1016, 165000.00, CURDATE(), 'PAID')
+--------------
+
+Query OK, 1 row affected
+
+--------------
+INSERT INTO FEE_PAYMENT (student_id, amount, payment_date)
+VALUES (1019, 172000.00, CURDATE())
+--------------
+
+Query OK, 1 row affected
+
+--------------
+SELECT log_id, table_name, action, record_id, details FROM AUDIT_LOG
+--------------
+
++--------+-------------+--------+-----------+---------------------------------------------------+
+| log_id | table_name  | action | record_id | details                                           |
++--------+-------------+--------+-----------+---------------------------------------------------+
+|      1 | FEE_PAYMENT | INSERT |        16 | student_id=1016, amount=165000.00, status=PAID    |
+|      2 | FEE_PAYMENT | INSERT |        17 | student_id=1019, amount=172000.00, status=PENDING |
++--------+-------------+--------+-----------+---------------------------------------------------+
+2 rows in set
+
+Bye

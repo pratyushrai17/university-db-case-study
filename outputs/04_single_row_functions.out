@@ -1,0 +1,110 @@
++------------+-----------------+-------------+
+| student_id | name_upper      | name_length |
++------------+-----------------+-------------+
+|       1001 | AARAV MEHTA     |          11 |
+|       1002 | DIYA SHARMA     |          11 |
+|       1003 | ROHAN GUPTA     |          11 |
+|       1004 | ANANYA IYER     |          11 |
+|       1005 | VIKRAM SINGH    |          12 |
+|       1006 | SNEHA REDDY     |          11 |
+|       1007 | ARJUN NAIR      |          10 |
+|       1008 | KAVYA MENON     |          11 |
+|       1009 | RAHUL VERMA     |          11 |
+|       1010 | POOJA PATEL     |          11 |
+|       1011 | SIDDHARTH RAO   |          13 |
+|       1012 | MEERA KRISHNAN  |          14 |
+|       1013 | ADITYA KUMAR    |          12 |
+|       1014 | ISHITA BOSE     |          11 |
+|       1015 | KARAN MALHOTRA  |          14 |
+|       1016 | NISHA THOMAS    |          12 |
+|       1017 | YASH JOSHI      |          10 |
+|       1018 | TANVI DESAI     |          11 |
+|       1019 | HARSH AGARWAL   |          13 |
+|       1020 | RIYA CHATTERJEE |          15 |
++------------+-----------------+-------------+
++-----------------+----------------------------------+------------------+
+| student_name    | email                            | email_domain     |
++-----------------+----------------------------------+------------------+
+| Aarav Mehta     | aarav.mehta@vitstudent.ac.in     | vitstudent.ac.in |
+| Diya Sharma     | diya.sharma@vitstudent.ac.in     | vitstudent.ac.in |
+| Rohan Gupta     | rohan.gupta@gmail.com            | gmail.com        |
+| Ananya Iyer     | ananya.iyer@vitstudent.ac.in     | vitstudent.ac.in |
+| Vikram Singh    | vikram.singh@yahoo.com           | yahoo.com        |
+| Sneha Reddy     | sneha.reddy@vitstudent.ac.in     | vitstudent.ac.in |
+| Arjun Nair      | arjun.nair@outlook.com           | outlook.com      |
+| Kavya Menon     | kavya.menon@vitstudent.ac.in     | vitstudent.ac.in |
+| Rahul Verma     | rahul.verma@gmail.com            | gmail.com        |
+| Pooja Patel     | pooja.patel@vitstudent.ac.in     | vitstudent.ac.in |
+| Siddharth Rao   | siddharth.rao@gmail.com          | gmail.com        |
+| Meera Krishnan  | meera.krishnan@vitstudent.ac.in  | vitstudent.ac.in |
+| Aditya Kumar    | aditya.kumar@yahoo.com           | yahoo.com        |
+| Ishita Bose     | ishita.bose@vitstudent.ac.in     | vitstudent.ac.in |
+| Karan Malhotra  | karan.malhotra@gmail.com         | gmail.com        |
+| Nisha Thomas    | nisha.thomas@vitstudent.ac.in    | vitstudent.ac.in |
+| Yash Joshi      | yash.joshi@outlook.com           | outlook.com      |
+| Tanvi Desai     | tanvi.desai@vitstudent.ac.in     | vitstudent.ac.in |
+| Harsh Agarwal   | harsh.agarwal@gmail.com          | gmail.com        |
+| Riya Chatterjee | riya.chatterjee@vitstudent.ac.in | vitstudent.ac.in |
++-----------------+----------------------------------+------------------+
++-----------------+------------+-----------+
+| student_name    | dob        | age_years |
++-----------------+------------+-----------+
+| Aarav Mehta     | 2005-03-14 |        21 |
+| Diya Sharma     | 2005-07-22 |        21 |
+| Rohan Gupta     | 2004-11-05 |        21 |
+| Ananya Iyer     | 2005-01-30 |        21 |
+| Vikram Singh    | 2004-09-18 |        22 |
+| Sneha Reddy     | 2005-12-02 |        20 |
+| Arjun Nair      | 2004-06-25 |        22 |
+| Kavya Menon     | 2005-04-11 |        21 |
+| Rahul Verma     | 2004-08-09 |        22 |
+| Pooja Patel     | 2005-02-17 |        21 |
+| Siddharth Rao   | 2004-12-28 |        21 |
+| Meera Krishnan  | 2005-10-07 |        21 |
+| Aditya Kumar    | 2004-05-19 |        22 |
+| Ishita Bose     | 2005-08-03 |        21 |
+| Karan Malhotra  | 2004-03-21 |        22 |
+| Nisha Thomas    | 2005-06-13 |        21 |
+| Yash Joshi      | 2004-10-29 |        21 |
+| Tanvi Desai     | 2005-09-08 |        21 |
+| Harsh Agarwal   | 2006-01-15 |        20 |
+| Riya Chatterjee | 2005-11-26 |        20 |
++-----------------+------------+-----------+
++----------------------+------------+---------------+
+| faculty_name         | doj        | doj_formatted |
++----------------------+------------+---------------+
+| Dr. Anil Sharma      | 2010-07-15 | 15-Jul-2010   |
+| Dr. Priya Venkatesh  | 2015-06-01 | 01-Jun-2015   |
+| Dr. Karthik Raja     | 2022-01-10 | 10-Jan-2022   |
+| Dr. Deepa Krishnan   | 2012-08-20 | 20-Aug-2012   |
+| Dr. Mohan Das        | 2023-07-03 | 03-Jul-2023   |
+| Dr. Sneha Pillai     | 2017-12-11 | 11-Dec-2017   |
+| Dr. Rajesh Nair      | 2011-03-25 | 25-Mar-2011   |
+| Dr. Farhan Ali       | 2024-02-19 | 19-Feb-2024   |
+| Dr. Lavanya Mohan    | 2018-09-05 | 05-Sep-2018   |
+| Dr. Ganesh Murthy    | 2021-11-22 | 22-Nov-2021   |
+| Dr. Swathi Reddy     | 2014-04-14 | 14-Apr-2014   |
+| Dr. Naveen Joseph    | 2025-01-06 | 06-Jan-2025   |
+| Dr. Harini Srinivas  | 2019-08-01 | 01-Aug-2019   |
+| Dr. Balaji Subramani | 2013-10-30 | 30-Oct-2013   |
+| Dr. Ritu Agarwal     | 2024-06-17 | 17-Jun-2024   |
++----------------------+------------+---------------+
++----------------------+-----------+----------------+------------------+------------+
+| faculty_name         | salary    | rounded_salary | truncated_salary | difference |
++----------------------+-----------+----------------+------------------+------------+
+| Dr. Anil Sharma      | 125400.00 |         125000 |           125000 |          0 |
+| Dr. Priya Venkatesh  |  88750.00 |          89000 |            88000 |       1000 |
+| Dr. Karthik Raja     |  62300.00 |          62000 |            62000 |          0 |
+| Dr. Deepa Krishnan   | 118900.00 |         119000 |           118000 |       1000 |
+| Dr. Mohan Das        |  58600.00 |          59000 |            58000 |       1000 |
+| Dr. Sneha Pillai     |  84250.00 |          84000 |            84000 |          0 |
+| Dr. Rajesh Nair      | 109500.00 |         110000 |           109000 |       1000 |
+| Dr. Farhan Ali       |  55450.00 |          55000 |            55000 |          0 |
+| Dr. Lavanya Mohan    |  79800.00 |          80000 |            79000 |       1000 |
+| Dr. Ganesh Murthy    |  67150.00 |          67000 |            67000 |          0 |
+| Dr. Swathi Reddy     |  97600.00 |          98000 |            97000 |       1000 |
+| Dr. Naveen Joseph    |  52900.00 |          53000 |            52000 |       1000 |
+| Dr. Harini Srinivas  |  76450.00 |          76000 |            76000 |          0 |
+| Dr. Balaji Subramani |  91200.00 |          91000 |            91000 |          0 |
+| Dr. Ritu Agarwal     |  48750.00 |          49000 |            48000 |       1000 |
++----------------------+-----------+----------------+------------------+------------+

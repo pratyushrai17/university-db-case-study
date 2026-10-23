@@ -1,0 +1,11 @@
++-------------------------+
+| Tables_in_university_db |
++-------------------------+
+| AUDIT_LOG               |
+| COURSE                  |
+| DEPARTMENT              |
+| ENROLLMENT              |
+| FACULTY                 |
+| FEE_PAYMENT             |
+| STUDENT                 |
++-------------------------+

@@ -1,0 +1,70 @@
++------------+-----------------+-----------+
+| student_id | student_name    | dept_name |
++------------+-----------------+-----------+
+|       1001 | Aarav Mehta     | CSE       |
+|       1002 | Diya Sharma     | CSE       |
+|       1003 | Rohan Gupta     | CSE       |
+|       1004 | Ananya Iyer     | CSE       |
+|       1005 | Vikram Singh    | CSE       |
+|       1006 | Sneha Reddy     | CSE       |
+|       1007 | Arjun Nair      | CSE       |
+|       1008 | Kavya Menon     | ECE       |
+|       1009 | Rahul Verma     | ECE       |
+|       1010 | Pooja Patel     | ECE       |
+|       1011 | Siddharth Rao   | ECE       |
+|       1012 | Meera Krishnan  | EEE       |
+|       1013 | Aditya Kumar    | EEE       |
+|       1014 | Ishita Bose     | MECH      |
+|       1015 | Karan Malhotra  | MECH      |
+|       1016 | Nisha Thomas    | CIVIL     |
+|       1017 | Yash Joshi      | IT        |
+|       1018 | Tanvi Desai     | IT        |
+|       1019 | Harsh Agarwal   | BIOTECH   |
+|       1020 | Riya Chatterjee | MATH      |
++------------+-----------------+-----------+
++------------+----------------------+-----------+---------------------------+
+| faculty_id | faculty_name         | course_id | course_name               |
++------------+----------------------+-----------+---------------------------+
+|        101 | Dr. Anil Sharma      | BCSE302L  | Database Systems          |
+|        101 | Dr. Anil Sharma      | BCSE306L  | Artificial Intelligence   |
+|        102 | Dr. Priya Venkatesh  | BCSE303L  | Operating Systems         |
+|        102 | Dr. Priya Venkatesh  | BCSE308L  | Computer Networks         |
+|        103 | Dr. Karthik Raja     | -         | Not assigned              |
+|        104 | Dr. Deepa Krishnan   | BECE204L  | Microprocessors           |
+|        105 | Dr. Mohan Das        | BECE301L  | Digital Signal Processing |
+|        106 | Dr. Sneha Pillai     | BEEE205L  | Power Systems             |
+|        107 | Dr. Rajesh Nair      | BMEE207L  | Thermodynamics            |
+|        108 | Dr. Farhan Ali       | -         | Not assigned              |
+|        109 | Dr. Lavanya Mohan    | BCLE210L  | Structural Analysis       |
+|        110 | Dr. Ganesh Murthy    | BITE304L  | Web Technologies          |
+|        111 | Dr. Swathi Reddy     | -         | Not assigned              |
+|        112 | Dr. Naveen Joseph    | -         | Not assigned              |
+|        113 | Dr. Harini Srinivas  | BCHY102L  | Engineering Chemistry     |
+|        114 | Dr. Balaji Subramani | BMAT205L  | Discrete Mathematics      |
+|        115 | Dr. Ritu Agarwal     | -         | Not assigned              |
++------------+----------------------+-----------+---------------------------+
++------------+---------------+
+| student_id | student_name  |
++------------+---------------+
+|       1007 | Arjun Nair    |
+|       1016 | Nisha Thomas  |
+|       1019 | Harsh Agarwal |
++------------+---------------+
++--------------------+---------+-----------+-----------------+
+| faculty_name       | dept_id | salary    | dept_avg_salary |
++--------------------+---------+-----------+-----------------+
+| Dr. Anil Sharma    |       1 | 125400.00 |        92150.00 |
+| Dr. Deepa Krishnan |       2 | 118900.00 |        88750.00 |
+| Dr. Rajesh Nair    |       4 | 109500.00 |        82475.00 |
+| Dr. Swathi Reddy   |       6 |  97600.00 |        82375.00 |
++--------------------+---------+-----------+-----------------+
++------------+------------+-----------------+-----------+-----------+--------------+---------+
+| payment_id | student_id | student_name    | dept_name | amount    | payment_date | status  |
++------------+------------+-----------------+-----------+-----------+--------------+---------+
+|          3 |       1003 | Rohan Gupta     | CSE       | 198000.00 | 2026-07-10   | PENDING |
+|          6 |       1005 | Vikram Singh    | CSE       |  99000.00 | 2026-07-15   | PENDING |
+|          9 |       1009 | Rahul Verma     | ECE       | 176000.00 | 2026-07-18   | PENDING |
+|         13 |       1015 | Karan Malhotra  | MECH      | 165000.00 | 2026-07-19   | PENDING |
+|         14 |       1017 | Yash Joshi      | IT        | 182000.00 | 2026-07-20   | PENDING |
+|         15 |       1020 | Riya Chatterjee | MATH      | 150000.00 | 2026-07-21   | PENDING |
++------------+------------+-----------------+-----------+-----------+--------------+---------+

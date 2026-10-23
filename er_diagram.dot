@@ -1,0 +1,88 @@
+digraph University_ER {
+  graph [rankdir=LR, splines=true, nodesep=0.7, ranksep=1.3, fontname="Helvetica", pad=0.4,
+         label="ER Diagram - University Database Management System  (PK = primary key, FK = foreign key)",
+         labelloc=t, fontsize=18];
+  node  [shape=plain, fontname="Helvetica", fontsize=12];
+  edge  [fontname="Helvetica", fontsize=11, color="#444444", arrowsize=0.9];
+
+  DEPARTMENT [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#1f4e79"><font color="white"><b>DEPARTMENT</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> dept_id</td></tr>
+    <tr><td align="left">dept_name (NOT NULL, UNIQUE)</td></tr>
+    <tr><td align="left">hod_name</td></tr>
+   </table>>];
+
+  FACULTY [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#1f4e79"><font color="white"><b>FACULTY</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> faculty_id</td></tr>
+    <tr><td align="left">faculty_name (NOT NULL)</td></tr>
+    <tr><td align="left"><b>FK</b> dept_id</td></tr>
+    <tr><td align="left">designation</td></tr>
+    <tr><td align="left">salary (CHECK &gt; 0)</td></tr>
+    <tr><td align="left">doj</td></tr>
+   </table>>];
+
+  STUDENT [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#1f4e79"><font color="white"><b>STUDENT</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> student_id</td></tr>
+    <tr><td align="left">student_name (NOT NULL)</td></tr>
+    <tr><td align="left">dob</td></tr>
+    <tr><td align="left">gender</td></tr>
+    <tr><td align="left"><b>FK</b> dept_id</td></tr>
+    <tr><td align="left">email (UNIQUE)</td></tr>
+    <tr><td align="left">phone (UNIQUE)</td></tr>
+   </table>>];
+
+  COURSE [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#1f4e79"><font color="white"><b>COURSE</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> course_id</td></tr>
+    <tr><td align="left">course_name</td></tr>
+    <tr><td align="left"><b>FK</b> dept_id</td></tr>
+    <tr><td align="left">credits (CHECK 1-6)</td></tr>
+    <tr><td align="left"><b>FK</b> faculty_id</td></tr>
+   </table>>];
+
+  ENROLLMENT [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#2e75b6"><font color="white"><b>ENROLLMENT</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> enroll_id</td></tr>
+    <tr><td align="left"><b>FK</b> student_id</td></tr>
+    <tr><td align="left"><b>FK</b> course_id</td></tr>
+    <tr><td align="left">enroll_date</td></tr>
+    <tr><td align="left">grade</td></tr>
+   </table>>];
+
+  FEE_PAYMENT [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#1f4e79"><font color="white"><b>FEE_PAYMENT</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> payment_id</td></tr>
+    <tr><td align="left"><b>FK</b> student_id</td></tr>
+    <tr><td align="left">amount</td></tr>
+    <tr><td align="left">payment_date</td></tr>
+    <tr><td align="left">status (DEFAULT 'PENDING')</td></tr>
+   </table>>];
+
+  AUDIT_LOG [label=<
+   <table border="0" cellborder="1" cellspacing="0" cellpadding="6">
+    <tr><td bgcolor="#7f7f7f"><font color="white"><b>AUDIT_LOG</b></font></td></tr>
+    <tr><td align="left"><b>PK</b> log_id</td></tr>
+    <tr><td align="left">table_name</td></tr>
+    <tr><td align="left">action</td></tr>
+    <tr><td align="left">record_id</td></tr>
+    <tr><td align="left">details</td></tr>
+    <tr><td align="left">logged_by, logged_at</td></tr>
+   </table>>];
+
+  DEPARTMENT -> FACULTY     [label=" employs  1 : N ", arrowhead=crow];
+  DEPARTMENT -> STUDENT     [label=" has  1 : N ",     arrowhead=crow];
+  DEPARTMENT -> COURSE      [label=" offers  1 : N ",  arrowhead=crow];
+  FACULTY    -> COURSE      [label=" teaches  1 : N ", arrowhead=crow, style=dashed];
+  STUDENT    -> ENROLLMENT  [label=" 1 : N ",          arrowhead=crow];
+  COURSE     -> ENROLLMENT  [label=" 1 : N ",          arrowhead=crow];
+  STUDENT    -> FEE_PAYMENT [label=" pays  1 : N ",    arrowhead=crow];
+  FEE_PAYMENT -> AUDIT_LOG  [label=" logged by trigger ", style=dotted, arrowhead=vee, color="#7f7f7f"];
+}

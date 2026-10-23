@@ -1,0 +1,56 @@
++------------+---------------+-----------+
+| student_id | student_name  | dept_name |
++------------+---------------+-----------+
+|       1001 | Aarav Mehta   | CSE       |
+|       1002 | Diya Sharma   | CSE       |
+|       1003 | Rohan Gupta   | CSE       |
+|       1004 | Ananya Iyer   | CSE       |
+|       1005 | Vikram Singh  | CSE       |
+|       1006 | Sneha Reddy   | CSE       |
+|       1007 | Arjun Nair    | CSE       |
+|       1008 | Kavya Menon   | ECE       |
+|       1009 | Rahul Verma   | ECE       |
+|       1010 | Pooja Patel   | ECE       |
+|       1011 | Siddharth Rao | ECE       |
++------------+---------------+-----------+
++------------+---------------------+---------------------+----------+
+| faculty_id | faculty_name        | designation         | salary   |
++------------+---------------------+---------------------+----------+
+|        102 | Dr. Priya Venkatesh | Associate Professor | 88750.00 |
+|        106 | Dr. Sneha Pillai    | Associate Professor | 84250.00 |
+|        109 | Dr. Lavanya Mohan   | Associate Professor | 79800.00 |
+|        113 | Dr. Harini Srinivas | Associate Professor | 76450.00 |
+|        110 | Dr. Ganesh Murthy   | Assistant Professor | 67150.00 |
+|        103 | Dr. Karthik Raja    | Assistant Professor | 62300.00 |
+|        105 | Dr. Mohan Das       | Assistant Professor | 58600.00 |
+|        108 | Dr. Farhan Ali      | Assistant Professor | 55450.00 |
+|        112 | Dr. Naveen Joseph   | Assistant Professor | 52900.00 |
++------------+---------------------+---------------------+----------+
++-----------+---------------------------+-------------------+
+| course_id | course_name               | students_enrolled |
++-----------+---------------------------+-------------------+
+| BCSE302L  | Database Systems          |                 4 |
+| BCSE306L  | Artificial Intelligence   |                 3 |
+| BECE204L  | Microprocessors           |                 3 |
+| BITE304L  | Web Technologies          |                 3 |
+| BCSE303L  | Operating Systems         |                 2 |
+| BCSE308L  | Computer Networks         |                 2 |
+| BECE301L  | Digital Signal Processing |                 2 |
+| BEEE205L  | Power Systems             |                 2 |
+| BMAT205L  | Discrete Mathematics      |                 2 |
+| BMEE207L  | Thermodynamics            |                 2 |
+| BCHY102L  | Engineering Chemistry     |                 0 |
+| BCLE210L  | Structural Analysis       |                 0 |
++-----------+---------------------------+-------------------+
++-----------+---------------+
+| dept_name | student_count |
++-----------+---------------+
+| CSE       |             7 |
++-----------+---------------+
++---------+--------------+--------------+
+| status  | num_payments | total_amount |
++---------+--------------+--------------+
+| PAID    |            7 |   1309000.00 |
+| PENDING |            6 |    970000.00 |
+| FAILED  |            2 |    264000.00 |
++---------+--------------+--------------+
